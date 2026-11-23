@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 1 В файле config.txt заменить первое вхождение localhost на 127.0.0.1 в каждой строке
 sed 's/localhost/127.0.0.1/' config.txt
 

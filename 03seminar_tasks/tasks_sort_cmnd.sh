@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 1 Сортировать строки файла users.txt по алфавиту 
 sort userts.txt
 

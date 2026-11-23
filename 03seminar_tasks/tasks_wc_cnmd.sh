@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 1 Определить количество строк в файле app.log
 wc -l app.log
 
@@ -24,7 +26,7 @@ grep users.txt | uniq | wc -l
 find . -type f | ws -l
 
 # 9 Определить количество файлов с расширением .log во всем каталоге logs
-fins ./logs -type f -name "*.log" | wc -l
+find ./logs -type f -name "*.log" | wc -l
 
 # 10 Найти ERROR во всех .log-файлах каталога logs и определить общее количество найденных строк 
 grep -r --include="*.log" "ERROR" ./logs | wc -l

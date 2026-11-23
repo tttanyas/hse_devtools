@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 1 В файле app.log найти все строки, содержащие error
 grep "ERROR" app.log
 

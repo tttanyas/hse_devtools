@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 1 Найти в текущем каталоге и всех его подкаталогах только обычные файлы
 find . -type f
 
@@ -8,13 +10,12 @@ find . -type f -name "*.log"
 find . -type f -iname "*.log"
 
 # 4 Найти обычные файлы размером больше 10 мб
-find . -type d -size +10M
+find . -type f -size +10M
 
 # 5 Найти .log-файлы, которые изменялись за последние 7 дней
 find . -type f -name "*.log" -mtime -7
 
 # 6 Найти обычные файлы с расширением .csv или .json
-# палки - объединение условий (ищи и то, и то)
 find . -type f \( -name "*.csv" -o -name "*.json" \)
 
 # 7 Найти все .log-файлы, кроме файлов, имя которых начинается с debug
@@ -25,8 +26,8 @@ find . -type f -name "*.log" ! -name "debug*"
 find . -type f -name "*.log" -size +5M -mtime -3
 
 # 9 Найти .tmp-файлы старше 30 дней и удалить их
-find . -type f -name "*.tmp" -mtime +30 -delete # +30 или -30????
+find . -type f -name "*.tmp" -mtime +30 -delete
 
-# 10 Найти .log-файлы больше 10 МБ и вывести размер и путь кждого файла 
+# 10 Найти .log-файлы больше 10 МБ и вывести размер и путь каждого файла 
 find . -type f -name "*.log" -size +10M -exec du -h {} +
 
